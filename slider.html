@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background: url(../img/iewek-gnos-hhUx08PuYpc-unsplash.jpg);
+    }
+    #slider {
+      margin: 50px;
+      padding: 5px 100px;
+      display: flex;
+    }
+    .slide{
+        padding: 20px;
+        text-align: center;
+        border: 2px solid rgb(244, 240, 240);
+        margin: 20px;
+        border-radius: 50px;
+        color: blanchedalmond;
+    }
+    h1{
+        text-align: center;
+        color: white;
+    }
+    .mySlides {display:none;}
+    .mySlides{
+        color: white;
+    }
+  </style>
+  <body>
+    <h1>Slider</h1>
+    <div id="slider">
+      <div class="mySlides">
+        <h1>Slider-1</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga velit
+          doloremque voluptatum pariatur ullam? Quam doloribus dolor ducimus
+          quibusdam ipsa aspernatur iste reiciendis maiores magnam
+          exercitationem omnis earum officiis incidunt, tempore est inventore
+          excepturi quas ipsum, qui cum libero sequi.
+        </p>
+      </div>
+      <div class="mySlides" width="100%">
+        <h1>Slider-2</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga velit
+          doloremque voluptatum pariatur ullam? Quam doloribus dolor ducimus
+          quibusdam ipsa aspernatur iste reiciendis maiores magnam
+          exercitationem omnis earum officiis incidunt, tempore est inventore
+          excepturi quas ipsum, qui cum libero sequi.
+        </p>
+      </div>
+      <div class="mySlides" width="100%">
+        <h1>Slider-3</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga velit
+          doloremque voluptatum pariatur ullam? Quam doloribus dolor ducimus
+          quibusdam ipsa aspernatur iste reiciendis maiores magnam
+          exercitationem omnis earum officiis incidunt, tempore est inventore
+          excepturi quas ipsum, qui cum libero sequi.
+        </p>
+      </div>
+    </div>
+    <!-- <h2 class="w3-center">Automatic Slideshow</h2> -->
+
+<!-- <div class="w3-content w3-section" style="max-width:500px"style="max-width:500px">
+  <p class="mySlides" width="100%">euhjfhjhhikjekrjhfhljrjirji</p>
+  <p class="mySlides" width="100%">ghffeuhjfhjhhikjekrjhfhljrjirji</p>
+  <p class="mySlides" width="100%">gggjeuhjfhjhhikjekrjhfhljrjirji</p>
+  <p class="mySlides" width="100%">bbbeuhjfhjhhikjekrjhfhljrjirji</p>
+  <p class="mySlides" width="100%">ccccc</p>
+</div> -->
+<script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+    </script>
+  </body>
+</html>
